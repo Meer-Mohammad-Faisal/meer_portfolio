@@ -1,162 +1,125 @@
-import { Github, Linkedin, Mail, Code2, Award, FileText } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowDownRight, ArrowRight, Mail, Sparkles } from 'lucide-react';
+import { heroBadges, profile, socials } from '../data/portfolio';
 
-const Hero = ({ darkMode }) => {
-  const socialLinks = [
-    {
-      icon: Github,
-      href: 'https://github.com/Meer-Mohammad-Faisal',
-      label: 'GitHub',
-    },
-    {
-      icon: Linkedin,
-      href: 'https://www.linkedin.com/in/meer-faisal/',
-      label: 'LinkedIn',
-    },
-    {
-      icon: Code2,
-      href: 'https://leetcode.com/u/Meerfaisal/',
-      label: 'LeetCode',
-    },
-    {
-      icon: Award,
-      href: 'https://www.geeksforgeeks.org/user/fmd350g0i',
-      label: 'GeeksforGeeks',
-    },
-    {
-      icon: Mail,
-      href: 'mailto:fmd35585@gmail.com',
-      label: 'Email',
-    },
-  ];
+const stats = [
+  ['450+', 'DSA problems'],
+  ['3+', 'AI products'],
+  ['MERN', 'Core stack'],
+];
 
-  const scrollToSection = (sectionId) => {
-    const element = document.querySelector(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
+const Hero = () => {
   return (
-    <section
-      id="home"
-      className={`min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-[calc(var(--navbar-height,80px)+2rem)] ${
-        darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto w-full">
-        <div className="text-center space-y-8 animate-fade-in">
-          <div className="space-y-2">
-            <p
-              className={`text-sm sm:text-base font-medium tracking-wider uppercase ${
-                darkMode ? 'text-blue-400' : 'text-blue-600'
-              }`}
-            >
-              Hello, I'm
-            </p>
-            <h1
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}
-            >
-              Meer Mohammad Faisal
-            </h1>
-            <div
-              className={`text-lg sm:text-xl md:text-2xl font-medium ${
-                darkMode ? 'text-gray-300' : 'text-gray-600'
-              }`}
-            >
-              <span className={darkMode ? 'text-blue-400' : 'text-blue-600'}>
-                Full Stack Developer
-              </span>
-              {' | '}
-              <span className={darkMode ? 'text-green-400' : 'text-green-600'}>
-                AI & ML Developer
-              </span>
+    <section id="home" className="relative z-10 min-h-screen px-5 pb-20 pt-32 sm:px-6 lg:px-8 lg:pt-36">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-4xl"
+        >
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100 shadow-lg shadow-cyan-500/10">
+            <Sparkles size={16} />
+            Fresh graduate building backend-first AI products
+          </div>
+
+          <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+            Full Stack & GenAI Engineer Building Scalable AI-Powered Products
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+            I design production-grade MERN applications, backend systems, and LLM workflows that turn resumes, finance data, code, and documents into useful AI product experiences.
+          </p>
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" className="btn-primary">
+              View Projects
+              <ArrowRight size={18} />
+            </a>
+            <a href={profile.resume} target="_blank" rel="noreferrer" className="btn-secondary">
+              Resume
+              <ArrowDownRight size={18} />
+            </a>
+            <a href="#contact" className="btn-ghost">
+              Contact
+              <Mail size={18} />
+            </a>
+          </div>
+
+          <div className="mt-9 flex items-center gap-3">
+            {socials.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('mailto:') ? undefined : '_blank'}
+                rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
+                aria-label={label}
+                className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/[0.055] text-slate-300 transition hover:-translate-y-1 hover:border-cyan-300/35 hover:text-white hover:shadow-lg hover:shadow-cyan-500/10"
+              >
+                <Icon size={20} />
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-9 flex flex-wrap gap-3">
+            {heroBadges.map((badge, index) => (
+              <motion.span
+                key={badge}
+                className="rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-sm text-slate-300 backdrop-blur"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 + index * 0.045 }}
+              >
+                {badge}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mx-auto w-full max-w-lg"
+        >
+          <div className="absolute inset-8 rounded-full bg-cyan-400/20 blur-3xl" />
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 shadow-2xl shadow-black/30 backdrop-blur-2xl">
+            <div className="rounded-[1.5rem] border border-white/10 bg-[#080c16]/80 p-5">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-slate-400">Engineer profile</p>
+                  <h2 className="mt-1 text-2xl font-semibold text-white">{profile.name}</h2>
+                </div>
+                <div className="grid h-16 w-16 place-items-center rounded-3xl bg-gradient-to-br from-cyan-300 via-sky-400 to-fuchsia-400 text-xl font-black text-slate-950 shadow-lg shadow-cyan-400/20">
+                  {profile.initials}
+                </div>
+              </div>
+
+              <div className="mt-8 grid gap-3">
+                <div className="rounded-2xl border border-cyan-300/15 bg-cyan-300/10 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-cyan-200/70">Current focus</p>
+                  <p className="mt-2 text-lg font-semibold text-white">Backend systems + LLM workflows</p>
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                  {stats.map(([value, label]) => (
+                    <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+                      <p className="text-xl font-semibold text-white">{value}</p>
+                      <p className="mt-1 text-xs leading-5 text-slate-400">{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-slate-300">
+                <p><span className="text-emerald-300">const</span> engineer = &#123;</p>
+                <p className="pl-4">stack: "MERN + GenAI",</p>
+                <p className="pl-4">ships: "AI-powered products",</p>
+                <p className="pl-4">mindset: "scalable and clean"</p>
+                <p>&#125;</p>
+              </div>
             </div>
           </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            <h2
-              className={`text-2xl sm:text-3xl md:text-4xl font-bold ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}
-            >
-              Building Scalable Software & AI-Powered Solutions
-            </h2>
-            <p
-              className={`text-base sm:text-lg leading-relaxed ${
-                darkMode ? 'text-gray-400' : 'text-gray-600'
-              }`}
-            >
-              Driven Computer Engineering student with strong foundations in Data Structures, Full-Stack Development, and AI/ML. Experienced in building production-ready applications and AI-powered systems. Passionate about problem-solving, clean architecture, and continuous learning.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <a
-              href="/MEER_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-white transition-all transform hover:scale-105 ${
-                darkMode
-                  ? 'bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/50'
-                  : 'bg-blue-600 hover:bg-blue-700 shadow-lg'
-              }`}
-            >
-              <FileText size={20} />
-              View Resume
-            </a>
-            <button
-              onClick={() => scrollToSection('#projects')}
-              className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all transform hover:scale-105 ${
-                darkMode
-                  ? 'bg-gray-800 text-white hover:bg-gray-700'
-                  : 'bg-gray-900 text-white hover:bg-gray-800'
-              }`}
-            >
-              View Projects
-            </button>
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all border-2 ${
-                darkMode
-                  ? 'border-gray-700 text-white hover:bg-gray-800'
-                  : 'border-gray-300 text-gray-900 hover:bg-gray-100'
-              }`}
-            >
-              Contact Me
-            </button>
-          </div>
-
-          <div className="flex items-center justify-center gap-4 pt-8">
-            {socialLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  className={`p-3 rounded-lg transition-all transform hover:scale-110 ${
-                    darkMode
-                      ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
-                  }`}
-                >
-                  <Icon size={24} />
-                </a>
-              );
-            })}
-          </div>
-
-          <div className={`pt-12 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            <p className="text-sm font-medium">Based in Bangalore, Karnataka, India</p>
-            <p className="text-sm">
-              B.Tech CSE (AIML) • Technocrats Institute of Technology, Bhopal
-            </p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

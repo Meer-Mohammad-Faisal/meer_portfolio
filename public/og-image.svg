@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#05070d"/>
+  <circle cx="1000" cy="80" r="260" fill="#22d3ee" opacity=".14"/>
+  <circle cx="160" cy="560" r="280" fill="#d946ef" opacity=".12"/>
+  <path d="M90 120h1020v390H90z" fill="#ffffff" opacity=".045"/>
+  <path d="M90 120h1020v390H90z" fill="none" stroke="#ffffff" opacity=".12"/>
+  <text x="130" y="240" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800">Meer Mohammad Faisal</text>
+  <text x="130" y="320" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">Full Stack &amp; GenAI Engineer</text>
+  <text x="130" y="390" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="28">Scalable backend systems. AI-powered products. MERN + LLM workflows.</text>
+  <rect x="130" y="438" width="280" height="54" rx="27" fill="#67e8f9"/>
+  <text x="165" y="474" fill="#061018" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Portfolio 2026</text>
+</svg>

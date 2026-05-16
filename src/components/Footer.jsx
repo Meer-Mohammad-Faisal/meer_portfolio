@@ -1,44 +1,28 @@
-import { Heart, Code } from 'lucide-react';
+import { profile, socials } from '../data/portfolio';
 
-const Footer = ({ darkMode }) => {
+const Footer = () => {
   return (
-    <footer
-      className={`py-8 px-4 sm:px-6 lg:px-8 ${
-        darkMode ? 'bg-gray-900 border-t border-gray-800' : 'bg-white border-t border-gray-200'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div
-            className={`flex items-center gap-2 text-sm ${
-              darkMode ? 'text-gray-400' : 'text-gray-600'
-            }`}
-          >
-            <span>Built with</span>
-            <Heart size={16} className="text-red-500 animate-pulse" />
-            <span>and</span>
-            <Code size={16} className={darkMode ? 'text-blue-400' : 'text-blue-600'} />
-            <span>by Meer Mohammad Faisal</span>
-          </div>
-
-          <div
-            className={`text-sm ${
-              darkMode ? 'text-gray-400' : 'text-gray-600'
-            }`}
-          >
-            © {new Date().getFullYear()} All rights reserved
-          </div>
+    <footer className="relative z-10 border-t border-white/10 px-5 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="font-semibold text-slate-300">{profile.name}</p>
+          <p className="mt-1">{profile.role}</p>
         </div>
-
-        <div className="mt-4 text-center">
-          <p
-            className={`text-xs ${
-              darkMode ? 'text-gray-500' : 'text-gray-500'
-            }`}
-          >
-            Designed & Developed with React, TypeScript, and Tailwind CSS
-          </p>
+        <div className="flex items-center gap-3">
+          {socials.map(({ label, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith('mailto:') ? undefined : '_blank'}
+              rel="noreferrer"
+              aria-label={label}
+              className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-400 transition hover:text-white"
+            >
+              <Icon size={18} />
+            </a>
+          ))}
         </div>
+        <p>Copyright {new Date().getFullYear()} Meer Mohammad Faisal. All rights reserved.</p>
       </div>
     </footer>
   );
