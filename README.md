@@ -1,16 +1,110 @@
-# React + Vite
+# 🚀 Faisal | Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built to showcase my **skills, projects, and experience** in **Full Stack Development and AI/ML**.  
+It reflects my journey of learning by building real-world, production-ready applications.
 
-Currently, two official plugins are available:
+🌐 **Live Website:**  
+👉 https://lustrous-taiyaki-a643f6.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 👋 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I’m **Meer Mohammad Faisal**, a Computer Engineering student passionate about:
+- Full Stack Development
+- Artificial Intelligence & Machine Learning
+- Data Structures & Algorithms
+- Building scalable, clean, and impactful software
 
-## Expanding the ESLint configuration
+I strongly believe in **learning through projects** and continuously improving my technical depth.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- JavaScript
+- HTML & CSS
+
+### Backend & Tools
+- Node.js
+- Express.js
+- MongoDB
+- Git & GitHub
+
+### AI / ML & CS Foundations
+- Machine Learning (Basics)
+- NLP & GenAI (Basics)
+- NumPy
+- Data Structures & Algorithms
+- OOPs, DBMS, OS
+
+---
+
+## 📂 Sections in Portfolio
+
+- Home / Hero Section
+- About Me
+- Skills
+- Projects
+- Experience
+- Education
+- Contact
+
+Each section is designed to be **clean, responsive, and recruiter-friendly**.
+
+---
+
+## ✨ Features
+
+- Fully responsive (Mobile, Tablet, Desktop)
+- Smooth scrolling navigation
+- Dark / Light mode
+- Modern UI with subtle animations
+- Fast and optimized performance
+- Deployed on Netlify
+
+---
+
+## 🧠 What I Learned
+
+- Building scalable React components
+- Clean UI/UX using Tailwind CSS
+- Structuring real-world frontend projects
+- Deployment & hosting workflow
+- Writing production-quality code
+
+---
+
+## 📸 Preview
+
+> Visit the live site to explore the complete experience:  
+👉 https://lustrous-taiyaki-a643f6.netlify.app/
+
+---
+
+## 📬 Contact
+
+- 📧 Email: **fmd35585@gmail.com**
+- 💼 LinkedIn: *(add your LinkedIn link here)*
+- 🧑‍💻 GitHub: *(add your GitHub profile link here)*
+
+---
+
+## 📌 Future Improvements
+
+- Add blog section
+- Add project case studies
+- Integrate contact form backend
+- Improve SEO & Lighthouse score
+
+---
+
+## ⭐ Feedback
+
+If you like this project, feel free to **star ⭐ the repository**.  
+Feedback and suggestions are always welcome!
+
+Thank you for visiting 🙌
