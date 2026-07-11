@@ -11,7 +11,7 @@ const Resume = () => {
         <SectionHeader
           eyebrow="Resume"
           title="A quick recruiter snapshot, ready to download."
-          copy="The resume highlights full stack engineering, backend development, MERN projects, and GenAI application building."
+          copy="The resume highlights full stack engineering, backend development, MERN projects, practical GenAI features, and deployment basics."
         />
 
         <SpotlightCard className="p-6 sm:p-8">
@@ -43,7 +43,7 @@ const Resume = () => {
               <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200/80">Recruiter-ready</p>
               <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white">Full Stack & GenAI Engineer</h3>
               <p className="mt-4 max-w-2xl leading-7 text-slate-400">
-                Strong foundation in MERN stack development, backend APIs, authentication, RBAC, MongoDB, OpenAI-powered workflows, OCR, RAG concepts, and DSA problem solving.
+                Strong foundation in MERN stack development, backend APIs, authentication, RBAC, MongoDB, PostgreSQL basics, OpenAI-powered workflows, OCR, CI/CD basics, Docker basics, and DSA problem solving.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a href={profile.resume} download className="btn-primary">

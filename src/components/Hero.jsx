@@ -4,8 +4,8 @@ import { heroBadges, profile, socials } from '../data/portfolio';
 
 const stats = [
   ['450+', 'DSA problems'],
-  ['3+', 'AI products'],
-  ['MERN', 'Core stack'],
+  ['9', 'Portfolio builds'],
+  ['MERN', 'Primary stack'],
 ];
 
 const Hero = () => {
@@ -20,7 +20,7 @@ const Hero = () => {
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100 shadow-lg shadow-cyan-500/10">
             <Sparkles size={16} />
-            Fresh graduate building backend-first AI products
+            Fresh graduate building full stack products with practical GenAI
           </div>
 
           <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-            I design production-grade MERN applications, backend systems, and LLM workflows that turn resumes, finance data, code, and documents into useful AI product experiences.
+            I build full stack web applications with solid backend foundations and focused GenAI features where they create real product value.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -98,7 +98,7 @@ const Hero = () => {
               <div className="mt-8 grid gap-3">
                 <div className="rounded-2xl border border-cyan-300/15 bg-cyan-300/10 p-4">
                   <p className="text-xs uppercase tracking-[0.24em] text-cyan-200/70">Current focus</p>
-                  <p className="mt-2 text-lg font-semibold text-white">Backend systems + LLM workflows</p>
+                  <p className="mt-2 text-lg font-semibold text-white">Full stack products + focused GenAI</p>
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   {stats.map(([value, label]) => (
@@ -113,7 +113,7 @@ const Hero = () => {
               <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-slate-300">
                 <p><span className="text-emerald-300">const</span> engineer = &#123;</p>
                 <p className="pl-4">stack: "MERN + GenAI",</p>
-                <p className="pl-4">ships: "AI-powered products",</p>
+                <p className="pl-4">ships: "full stack products",</p>
                 <p className="pl-4">mindset: "scalable and clean"</p>
                 <p>&#125;</p>
               </div>

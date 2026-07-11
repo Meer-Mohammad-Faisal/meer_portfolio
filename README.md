@@ -1,4 +1,4 @@
-# 🚀 Faisal | Personal Portfolio Website
+# Faisal | Personal Portfolio Website
 
 This is my personal portfolio website built to showcase my **skills, projects, and experience** in **Full Stack Development and AI/ML**.  
 It reflects my journey of learning by building real-world, production-ready applications.

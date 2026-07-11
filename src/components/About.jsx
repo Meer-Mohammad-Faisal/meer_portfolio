@@ -10,8 +10,8 @@ const About = () => {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="About"
-          title="Backend-minded full stack engineer with an AI product edge."
-          copy="I am focused on building clean, recruiter-visible products that combine reliable application engineering with practical GenAI workflows."
+          title="Full stack engineer with backend depth and practical AI instincts."
+          copy="I am focused on building clean, recruiter-visible products that combine polished frontend UX, reliable backend engineering, and useful GenAI features where they make sense."
         />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -38,9 +38,9 @@ const About = () => {
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200/80">Engineering map</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">From API foundations to AI-integrated workflows.</h3>
+              <h3 className="mt-3 text-2xl font-semibold text-white">From frontend product flow to reliable APIs.</h3>
               <p className="mt-4 leading-7 text-slate-400">
-                My strongest direction is building backend-heavy products where authentication, data models, REST APIs, and AI workflows meet a polished user experience.
+                My strongest direction is building full stack products where clean UI, authentication, data models, REST APIs, and practical AI features meet in one usable experience.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

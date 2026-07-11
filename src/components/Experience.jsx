@@ -11,7 +11,7 @@ const Experience = () => {
         <SectionHeader
           eyebrow="Journey"
           title="The path is deliberately product-focused."
-          copy="A timeline of the engineering strengths behind the portfolio: scalable backends, GenAI workflows, and strong problem-solving habits."
+          copy="A timeline of the engineering strengths behind the portfolio: full stack delivery, backend foundations, practical GenAI features, and strong problem-solving habits."
         />
 
         <div className="relative">
