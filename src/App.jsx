@@ -13,7 +13,7 @@ import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   return (
-    <div className="min-h-screen overflow-hidden bg-[#05070d] text-slate-100 selection:bg-cyan-400/30 selection:text-white">
+    <div className="min-h-screen overflow-x-hidden bg-[#05070d] text-slate-100 selection:bg-cyan-400/30 selection:text-white">
       <ScrollProgress />
       <CursorGlow />
       <BackgroundEffects />

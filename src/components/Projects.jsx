@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
 import { ArrowUpRight, ChevronDown, Github } from 'lucide-react';
-import AnimatedSection from './AnimatedSection';
 import SectionHeader from './SectionHeader';
 import SpotlightCard from './SpotlightCard';
 import { projects } from '../data/portfolio';
@@ -42,7 +40,7 @@ const TechStack = ({ stack }) => (
 
 const Projects = () => {
   return (
-    <AnimatedSection id="projects" className="z-10">
+    <section id="projects" className="relative z-10 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Featured projects"
@@ -52,13 +50,10 @@ const Projects = () => {
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map(({ title, subtitle, description, features, tech, github, demo, icon: Icon, metric, featured, caseStudy }, index) => (
-            <motion.article
+            <article
               key={title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: Math.min(index * 0.055, 0.35) }}
               className={featured ? 'xl:col-span-1' : ''}
+              style={{ animationDelay: `${Math.min(index * 55, 350)}ms` }}
             >
               <SpotlightCard className="flex h-full flex-col p-6">
                 <div className="flex items-start justify-between gap-5">
@@ -174,11 +169,11 @@ const Projects = () => {
                   </div>
                 </details>
               </SpotlightCard>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 };
 
