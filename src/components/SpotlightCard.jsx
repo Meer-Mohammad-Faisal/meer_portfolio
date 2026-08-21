@@ -7,7 +7,7 @@ const SpotlightCard = ({ children, className = '' }) => {
 
   return (
     <div
-      className={`spotlight-card group relative overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/20 backdrop-blur-xl ${className}`}
+      className={`spotlight-card group relative overflow-hidden rounded-lg border border-[rgba(255,255,255,0.08)] bg-[#0B0B0B] shadow-sm ${className}`}
       onPointerMove={handlePointerMove}
     >
       {children}

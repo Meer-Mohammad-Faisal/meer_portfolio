@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { navItems, profile } from '../data/portfolio';
+import { navItems, profile, socials } from '../data/portfolio';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,15 +40,7 @@ const Navbar = () => {
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <a href="#home" onClick={handleNavigate} className="group flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/[0.06] text-sm font-bold text-white shadow-lg shadow-cyan-500/10">
-            MF
-          </span>
-          <span className="hidden leading-tight sm:block">
-            <span className="block text-sm font-semibold text-white">{profile.name}</span>
-            <span className="block text-xs text-cyan-200/70">{profile.role}</span>
-          </span>
-        </a>
+        <div className="hidden lg:block w-48" aria-hidden></div>
 
         <div className="hidden items-center rounded-full border border-white/10 bg-white/[0.045] p-1 backdrop-blur-xl lg:flex">
           {navItems.map((item) => {
@@ -76,6 +68,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
+
           <a
             href={profile.resume}
             target="_blank"

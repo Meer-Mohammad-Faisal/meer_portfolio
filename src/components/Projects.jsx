@@ -49,7 +49,7 @@ const Projects = () => {
         />
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map(({ title, subtitle, description, features, tech, github, demo, icon: Icon, metric, featured, caseStudy }, index) => (
+          {projects.map(({ title, subtitle, description, features, tech, github, demo, icon: Icon, metric, featured, caseStudy, metrics }, index) => (
             <article
               key={title}
               className={featured ? 'xl:col-span-1' : ''}
@@ -69,6 +69,16 @@ const Projects = () => {
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200/70">{subtitle}</p>
                   <h3 className="mt-2 text-2xl font-semibold text-white">{title}</h3>
                   <p className="mt-3 text-sm leading-7 text-slate-400">{description}</p>
+                  {metrics ? (
+                    <div className="mt-3 flex flex-wrap gap-3">
+                      {metrics.map((m) => (
+                        <span key={m.label} className="rounded-full bg-white/[0.03] px-3 py-1 text-sm text-slate-300 ring-1 ring-white/6">
+                          <strong className="text-white">{m.value}</strong>
+                          <span className="ml-2 text-slate-400">{m.label}</span>
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
 
                 <div className="mt-6">

@@ -10,8 +10,8 @@ const About = () => {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="About"
-          title="Full stack engineer with backend depth and practical AI instincts."
-          copy="I am focused on building clean, recruiter-visible products that combine polished frontend UX, reliable backend engineering, and useful GenAI features where they make sense."
+          title="Software Engineer — backend & full-stack systems with applied AI specialization."
+          copy="Experienced software engineer focused on system design, scalable backend services, and reliable full-stack products. Production experience building REST APIs, React frontends, MongoDB/PostgreSQL data layers, authentication systems, caching, and CI/CD pipelines. Applied GenAI appears as a practical specialization on top of core engineering skills."
         />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -38,10 +38,16 @@ const About = () => {
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200/80">Engineering map</p>
-              <h3 className="mt-3 text-2xl font-semibold text-white">From frontend product flow to reliable APIs.</h3>
-              <p className="mt-4 leading-7 text-slate-400">
-                My strongest direction is building full stack products where clean UI, authentication, data models, REST APIs, and practical AI features meet in one usable experience.
-              </p>
+              <h3 className="mt-3 text-2xl font-semibold text-white">From reliable APIs to practical GenAI features.</h3>
+              <ul className="mt-4 list-disc pl-5 space-y-2 text-slate-400">
+                <li>Software engineering: system design, reliability, modular architecture, and production readiness.</li>
+                <li>Backend systems: production REST APIs (Node.js/Express), middleware, error handling, and observability.</li>
+                <li>Full-stack delivery: React frontends, dashboards, and product-oriented user flows.</li>
+                <li>Databases & caching: MongoDB, PostgreSQL, Redis — schema design, compound indexes, and query optimization.</li>
+                <li>Cloud & CI/CD: Docker, GitHub Actions, AWS EC2; containerized deployments and automated pipelines.</li>
+                <li>Applied GenAI: LLM integrations (OpenAI/Groq) and RAG workflows as practical augmentations to product features.</li>
+                <li>450+ DSA problems solved; open to Software Engineer / Full Stack / Backend roles.</li>
+              </ul>
             </div>
             <div className="flex flex-wrap gap-3">
               {aboutKeywords.map((keyword) => (

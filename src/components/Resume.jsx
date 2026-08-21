@@ -17,14 +17,9 @@ const Resume = () => {
         <SpotlightCard className="p-6 sm:p-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="rounded-[1.4rem] border border-white/10 bg-[#080c16]/75 p-6 shadow-2xl shadow-black/20">
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
-                <div>
-                  <p className="text-sm text-slate-400">Resume preview</p>
-                  <h3 className="mt-1 text-2xl font-semibold text-white">{profile.name}</h3>
-                </div>
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white text-lg font-black text-slate-950">
-                  MF
-                </div>
+              <div className="border-b border-white/10 pb-5">
+                <p className="text-sm text-slate-400">Resume preview</p>
+                <h3 className="mt-2 text-2xl font-semibold text-white">{profile.name}</h3>
               </div>
 
               <div className="mt-6 space-y-4">
@@ -41,9 +36,9 @@ const Resume = () => {
 
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200/80">Recruiter-ready</p>
-              <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white">Full Stack & GenAI Engineer</h3>
+              <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white">Software Engineer</h3>
               <p className="mt-4 max-w-2xl leading-7 text-slate-400">
-                Strong foundation in MERN stack development, backend APIs, authentication, RBAC, MongoDB, PostgreSQL basics, OpenAI-powered workflows, OCR, CI/CD basics, Docker basics, and DSA problem solving.
+                Backend and full-stack engineer focused on production APIs, scalable web applications, secure auth systems, data layers, deployment workflows, and practical AI features layered on top of solid engineering fundamentals.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a href={profile.resume} download className="btn-primary">

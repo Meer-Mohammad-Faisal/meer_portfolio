@@ -15,6 +15,7 @@ import {
   Layers3,
   Linkedin,
   Mail,
+  Phone,
   Megaphone,
   NotebookTabs,
   Rocket,
@@ -28,9 +29,10 @@ import {
 
 export const profile = {
   name: 'Meer Mohammad Faisal',
-  initials: 'MF',
-  role: 'Full Stack & GenAI Engineer',
+  initials: '',
+  role: 'Software Engineer',
   email: 'fmd35585@gmail.com',
+  phone: '+91 84093 35800',
   github: 'https://github.com/Meer-Mohammad-Faisal',
   linkedin: 'https://www.linkedin.com/in/meer-faisal/',
   resume: '/MEER_Resume.pdf',
@@ -52,6 +54,9 @@ export const socials = [
   { label: 'GitHub', href: profile.github, icon: Github },
   { label: 'LinkedIn', href: profile.linkedin, icon: Linkedin },
   { label: 'Email', href: `mailto:${profile.email}`, icon: Mail },
+  { label: 'Phone', href: `tel:${profile.phone.replace(/\s+/g, '')}`, icon: Phone },
+  { label: 'LeetCode', href: profile.leetcode, icon: TerminalSquare },
+  { label: 'GFG', href: profile.gfg, icon: Languages },
 ];
 
 export const heroBadges = [
@@ -67,6 +72,11 @@ export const heroBadges = [
 
 export const focusAreas = [
   {
+    icon: TerminalSquare,
+    title: 'Software Engineering',
+    copy: 'System design, reliable architectures, maintainable codebases, and pragmatic engineering practices for production services.',
+  },
+  {
     icon: Layers3,
     title: 'Full Stack Development',
     copy: 'End-to-end React and MERN applications with polished UI, reliable APIs, authentication, dashboards, and product-ready user flows.',
@@ -78,13 +88,8 @@ export const focusAreas = [
   },
   {
     icon: BrainCircuit,
-    title: 'Practical GenAI Integration',
-    copy: 'Focused AI features using OpenAI APIs, OCR, structured prompts, RAG concepts, validation checks, and useful workflow automation.',
-  },
-  {
-    icon: Code2,
-    title: 'Problem Solving',
-    copy: '450+ DSA problems solved with a focus on clean reasoning, data structures, algorithms, and interview-ready fundamentals.',
+    title: 'Applied GenAI',
+    copy: 'Practical AI features using OpenAI/Groq, RAG pipelines, structured prompts, and validation for reliable outputs.',
   },
 ];
 
@@ -109,34 +114,55 @@ export const aboutKeywords = [
 
 export const skillGroups = [
   {
-    title: 'Frontend',
-    icon: FileCode2,
-    skills: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Responsive UI'],
-    accent: 'from-cyan-400 to-sky-500',
+    title: 'Languages',
+    icon: TerminalSquare,
+    skills: ['JavaScript (ES6+)', 'TypeScript', 'Python', 'C++', 'SQL'],
+    accent: 'from-amber-300 to-orange-500',
   },
   {
     title: 'Backend',
     icon: Database,
-    skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Authentication', 'RBAC'],
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST API design',
+      'Middleware & error handling',
+      'Microservices & distributed systems',
+      'Rate limiting & throttling',
+      'JWT & RBAC',
+      'Schema design & query optimization',
+    ],
     accent: 'from-emerald-400 to-teal-500',
+  },
+  {
+    title: 'Frontend',
+    icon: FileCode2,
+    skills: ['JavaScript (ES6+)', 'React', 'Next.js', 'HTML & CSS', 'Responsive UI', 'Accessibility'],
+    accent: 'from-cyan-400 to-sky-500',
+  },
+  {
+    title: 'Databases',
+    icon: Database,
+    skills: ['MongoDB (indexes & projections)', 'PostgreSQL', 'Redis (caching & sessions)', 'Supabase', 'Design for scale'],
+    accent: 'from-sky-400 to-blue-500',
+  },
+  {
+    title: 'Cloud & DevOps',
+    icon: BriefcaseBusiness,
+    skills: ['Docker', 'GitHub Actions CI/CD', 'AWS EC2', 'Containerized deployments', 'Monitoring & observability'],
+    accent: 'from-rose-300 to-pink-500',
+  },
+  {
+    title: 'Testing & Quality',
+    icon: ClipboardCheck,
+    skills: ['Jest', 'Unit & integration tests', 'Test coverage', 'E2E basics', 'Contracts & schema validation'],
+    accent: 'from-amber-200 to-amber-400',
   },
   {
     title: 'AI / GenAI',
     icon: Sparkles,
-    skills: ['OpenAI API', 'GPT-4o', 'RAG Concepts', 'Prompt Engineering', 'OCR Pipelines', 'AI Agents'],
+    skills: ['OpenAI API', 'RAG pipelines', 'Prompt engineering', 'Groq API', 'LLM orchestration (safe parsing)'],
     accent: 'from-fuchsia-400 to-violet-500',
-  },
-  {
-    title: 'Programming',
-    icon: TerminalSquare,
-    skills: ['C++', 'Python', 'JavaScript', 'DSA', 'System Design Basics'],
-    accent: 'from-amber-300 to-orange-500',
-  },
-  {
-    title: 'DevOps & Tools',
-    icon: BriefcaseBusiness,
-    skills: ['Git', 'GitHub', 'GitHub Actions', 'CI/CD Basics', 'Docker Basics', 'Postman', 'VS Code', 'Vercel'],
-    accent: 'from-rose-300 to-pink-500',
   },
 ];
 
@@ -189,6 +215,11 @@ export const projects = [
     featured: true,
     features: ['Resume parsing with job-context analysis', 'ATS-style compatibility scoring', 'Actionable AI improvement suggestions', 'Job match and dashboard workflow'],
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'OpenAI API'],
+    metrics: [
+      { value: '500+', label: 'resumes generated' },
+      { value: '150+', label: 'active users' },
+      { value: '85%', label: 'session retention' },
+    ],
     caseStudy: createCaseStudy({
       pitch:
         'RoleMatch AI helps job seekers turn a generic resume into a role-specific application asset. It compares resume content against job descriptions, identifies gaps, and converts feedback into clear next actions.',
@@ -274,6 +305,11 @@ export const projects = [
     featured: true,
     features: ['Problem practice workflow', 'AI explanations and hints', 'Code analysis for learning', 'Authentication and interview dashboard'],
     tech: ['MERN Stack', 'OpenAI API', 'JWT'],
+    metrics: [
+      { value: '200+', label: 'users' },
+      { value: '1,200+', label: 'code solutions' },
+      { value: '75%', label: '30-day retention' },
+    ],
     caseStudy: createCaseStudy({
       pitch:
         'FaisCode helps learners practice coding interviews with a structured problem platform and AI-assisted explanations. It focuses on learning why a solution works instead of only checking whether code passes.',
@@ -942,9 +978,49 @@ export const projects = [
         'Wortly is a short-form German learning platform that brings Reels-style engagement to educational content. It includes a vertical video feed, JWT authentication, likes, bookmarks, comments, PostgreSQL persistence, validation, upload handling, and Docker Compose for local development. This project is strong because it demonstrates backend structure, transactions, media delivery, and full stack product thinking.',
     }),
   },
+  {
+    title: 'ShortLink',
+    subtitle: 'URL shortener and analytics',
+    description:
+      'A lightweight URL shortener featuring QR code generation, real-time analytics, and async click processing for reliable tracking.',
+    github: 'https://github.com/Meer-Mohammad-Faisal/shortlink',
+    demo: '#',
+    icon: Rocket,
+    metric: 'URL Shortener',
+    featured: false,
+    features: ['QR code generation', 'Real-time analytics dashboard', 'Redis caching + BullMQ click processing', 'Short links with expiry and metadata preview'],
+    tech: ['React', 'Node.js', 'Redis', 'BullMQ', 'Supabase'],
+    metrics: [
+      { value: '200+', label: 'shortened URLs' },
+      { value: '89%', label: 'Jest test coverage' },
+    ],
+    caseStudy: createCaseStudy({
+      pitch: 'ShortLink is a production-ready URL shortener with analytics and async processing to keep click ingestion reliable.',
+      problem: ['Many shorteners lack reliable analytics and struggle with high click volumes.', 'Synchronous click processing can slow response times for redirects.'],
+      limitations: ['Prototype-level demo; production would require higher availability and scaling strategies.'],
+      solution: ['Use Redis for caching, BullMQ for async click aggregation, and Supabase for persistent storage with a lightweight frontend.'],
+      innovations: ['Separation of redirect path from analytics ingestion to keep latency low.', 'Async click processing and real-time dashboard updates.'],
+      features: ['Shorten links with QR export', 'Async click ingestion via BullMQ', 'Realtime analytics and dashboard snapshots'],
+      architecture: ['Frontend: React', 'Backend: Node.js + Express redirect service', 'Queue: BullMQ + Redis', 'Analytics: Supabase/Postgres + Redis cache'],
+      challenges: ['Keeping redirect latency low while ensuring click events are reliable and eventually-consistent.'],
+      impact: ['200+ shortened URLs; reliable analytics for demo users.'],
+      recruiter: ['Shows backend queueing, caching, test coverage, and analytics pipeline design.'],
+      roadmap: ['Scaling, custom domains, rate limits, SSO for teams'],
+      techStack: { Frontend: ['React'], Backend: ['Node.js', 'Express'], Database: ['Supabase/Postgres'], DevOps: ['Redis', 'BullMQ'] },
+      resume: ['Built a URL shortener with QR support, async analytics ingestion via BullMQ, and Redis-backed caching.'],
+      readme: 'ShortLink is a URL shortener with analytics, QR codes, and async click processing.',
+      portfolio: 'ShortLink demonstrates queue-based analytics, Redis caching, and a fast redirect path with a dashboard for analytics.',
+    }),
+  },
 ];
 
 export const journey = [
+  {
+    title: 'Dehix — Software Engineer Intern (Nov 2025 – Jan 2026)',
+    detail:
+      'Built 15+ production REST APIs in Node.js/Express; reduced average API latency ~30% (420ms → 290ms). Designed multi-role JWT + RBAC auth with access/refresh rotation, added Redis caching and BullMQ, cutting DB queries by ~35%. Re-engineered MongoDB schemas with compound indexes, cutting read latency ~25%. Containerized with Docker and automated deploys via GitHub Actions to AWS EC2.',
+    icon: BriefcaseBusiness,
+  },
   {
     title: 'Full Stack Development Journey',
     detail: 'Built multiple React and MERN applications with responsive interfaces, protected routes, dashboards, API integration, and deployment-ready frontend flows.',

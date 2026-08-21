@@ -10,8 +10,8 @@ const Skills = () => {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Skills"
-          title="A full stack toolkit with practical AI and deployment basics."
-          copy="Categorized around the work recruiters care about: frontend polish, backend reliability, useful GenAI features, CI/CD awareness, and problem-solving fundamentals."
+          title="A practical engineering toolkit"
+          copy="Focused on production-ready system design, backend reliability, frontend polish, data & caching, CI/CD, testing, and pragmatic GenAI features."
         />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
